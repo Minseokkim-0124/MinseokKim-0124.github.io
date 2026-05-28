@@ -15,3 +15,9 @@ funder: Korea Government (The Ministry of Trade, Industry & Energy, MOTIE)
 - Period: March 2025 – Present
 - Funding: Korea Government (The Ministry of Trade, Industry & Energy, MOTIE)
 - Skills: ROS2, Python, 3D Lane Detection, 3D Object Detection, C++
+
+<div class="mt-3">
+  <video width="100%" controls>
+    <source src="/assets/video/project_motie.mp4" type="video/mp4">
+  </video>
+</div>

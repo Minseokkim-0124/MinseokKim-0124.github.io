@@ -5,6 +5,7 @@ description: Research Member · March 2023 – December 2024 · Funded by Korea 
 importance: 2
 category: research
 role: Project Member
+skill: ROS2, Python, Elevation Mapping, C++
 period: March 2023 – December 2024
 start_sort: 202303
 funder: Korea Government (Agency for Defense Development, ADD)

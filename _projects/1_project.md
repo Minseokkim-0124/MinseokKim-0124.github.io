@@ -5,6 +5,7 @@ description: Research Member · March 2025 – Present · Funded by Korea Govern
 importance: 1
 category: research
 role: Project Member
+skills: ROS2, Python, 3D Lane Detection, 3D Object Detection, C++
 period : March 2025 – Present
 start_sort: 202503
 funder: Korea Government (The Ministry of Trade, Industry & Energy, MOTIE)

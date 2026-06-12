@@ -6,7 +6,7 @@ subtitle: Ph.D. Candidate @ <a href='https://vi.kaist.ac.kr/'>VILAB, KAIST</a>
 
 profile:
   align: right
-  image: minseok_profile.jpg
+  image: minseok_profile_2.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>📧 <a href="mailto:alstjrx1x1@kaist.ac.kr">alstjrx1x1@kaist.ac.kr</a></p>

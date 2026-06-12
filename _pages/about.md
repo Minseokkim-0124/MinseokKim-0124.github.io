@@ -7,7 +7,7 @@ subtitle: Ph.D. Candidate @ <a href='https://vi.kaist.ac.kr/'>VILAB, KAIST</a>
 profile:
   align: right
   image: minseok_profile_2.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: true # crops the image to make it circular
   more_info: >
     <p>📧 <a href="mailto:alstjrx1x1@kaist.ac.kr">alstjrx1x1@kaist.ac.kr</a></p>
     <p>🐙 <a href="https://github.com/Minseokkim-0124/">github.com/Minseokkim-0124/</a></p>
@@ -31,10 +31,15 @@ education:
     degree: "B.S., Mechanical Engineering, Hanyang University"
 ---
 
-Hello! I am a 2nd-year Ph.D. student in VILAB, led by Prof. Kuk-Jin Yoon in the Department of Mechanical Engineering at KAIST.
+Hello! 👋 I am a 2nd-year Ph.D. student at <a href="https://vi.kaist.ac.kr/">VILAB</a>, advised by <a href="https://vi.kaist.ac.kr/members/kuk-jin-yoon/">Prof. Kuk-Jin Yoon</a> in the Department of Mechanical Engineering at KAIST.
 
-Building upon my foundational background in robust 3D perception (LiDAR/Radar) and data-efficient learning (Category Discovery & Dataset Distillation), my current research vision is deeply focused on understanding human intention in egocentric scenarios. I am actively exploring how these insights can advance egocentric video understanding and shape next-generation AR/VR technologies.
+🔬 **Research Interests.** My research spans **robust 3D perception** (LiDAR / Radar) and **data-efficient learning** (Category Discovery & Dataset Distillation). Recently, my focus has shifted toward understanding **human intention in egocentric scenarios** — exploring how AI systems can interpret first-person videos to advance next-generation **AR / VR** and human-robot interaction technologies.
 
-I am always open to discussions on VLM, egocentric vision, human behavior understanding, and related topics. Feel free to reach out by email.
+💡 **Current Directions.**
+- Egocentric video understanding (gaze, hand, intention)
+- Vision-Language Models (VLM) for scene understanding
+- Generalized / Open-world 3D perception
 
-Also, I love playing electric guitar, photography and working out. If you have similar interests, you can find me on Instagram <span style="color: #2ecc71;">@min.nstone.</span>
+📬 I am always happy to discuss ideas on egocentric vision, VLMs, or 3D perception. Feel free to reach out via email!
+
+🎸 Outside of research, I enjoy playing electric guitar, photography, and working out. Find me on Instagram <span style="color: #2ecc71; font-weight: 600;">@min.nstone.</span>

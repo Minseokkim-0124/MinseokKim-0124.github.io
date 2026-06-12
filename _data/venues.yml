@@ -1,9 +1,18 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+"CVPR":
+  url: https://cvpr.thecvf.com/
+  color: "#1565C0"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"ECCV":
+  url: https://www.ecva.net/
+  color: "#6A1B9A"
 
-"Vision":
-  color: "#009f36"
+"WACV":
+  url: https://wacv2026.thecvf.com/
+  color: "#00695C"
+
+"AAAI":
+  url: https://aaai.org/
+  color: "#E65100"
+
+"Preprint":
+  color: "#546E7A"

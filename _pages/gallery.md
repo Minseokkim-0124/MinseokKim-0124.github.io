@@ -44,16 +44,16 @@ images:
   }
   .gallery-grid a img:hover {
     transform: scale(1.02);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
   }
 </style>
 
 <script>
   // Auto-detect actual image dimensions for PhotoSwipe
-  document.querySelectorAll('.gallery-grid a').forEach(function(a) {
+  document.querySelectorAll(".gallery-grid a").forEach(function (a) {
     var img = new Image();
-    img.onload = function() {
-      a.dataset.pswpWidth  = this.naturalWidth;
+    img.onload = function () {
+      a.dataset.pswpWidth = this.naturalWidth;
       a.dataset.pswpHeight = this.naturalHeight;
     };
     img.src = a.href;

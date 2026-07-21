@@ -40,6 +40,6 @@ Hello! 👋 I am a 2nd-year Ph.D. student at <a href="https://vi.kaist.ac.kr/">V
 - Vision-Language Models (VLM) for scene understanding
 - Generalized / Open-world 3D perception
 
-📬 I am always happy to discuss ideas on egocentric vision, VLMs, or 3D perception. Feel free to reach out via email!
+📬 I am always happy to discuss ideas and collaborate on egocentric vision, VLMs, or 3D perception. Feel free to reach out via email!
 
-🎸 Outside of research, I enjoy playing electric guitar, photography, and working out. Find me on Instagram <span style="color: #2ecc71; font-weight: 600;">@min.nstone.</span>
+🎸 Outside of research, I enjoy playing electric guitar, photography, and working out.

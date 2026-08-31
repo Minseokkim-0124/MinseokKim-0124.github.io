@@ -64,6 +64,14 @@ cv:
         highlights:
           - Attended Student Formula (EV) at KSAE 2021
 
+      - company: 15th Special Missions Wing, Republic of Korea Air Force
+        position: Sergeant (Mandatory Military Service)
+        location: South Korea
+        start_date: 2018
+        end_date: 2020
+        highlights:
+          - "Completed mandatory military service (23 April 2018 - 12 March 2020), honorably discharged as Sergeant"
+
     Interests:
       - name: Computer Vision and Deep Learning
         keywords:

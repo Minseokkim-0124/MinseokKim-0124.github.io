@@ -36,6 +36,7 @@ Hello! 👋 I am a 2nd-year Ph.D. student at <a href="https://vi.kaist.ac.kr/">V
 🔬 **Research Interests.** My research spans **robust 3D perception** (LiDAR / Radar) and **data-efficient learning** (Category Discovery & Dataset Distillation). Recently, my focus has shifted toward understanding **human intention in egocentric scenarios** — exploring how AI systems can interpret first-person videos to advance next-generation **AR / VR** and human-robot interaction technologies.
 
 💡 **Current Directions.**
+
 - Egocentric video understanding (gaze, hand, intention)
 - Vision-Language Models (VLM) for scene understanding
 - Generalized / Open-world 3D perception

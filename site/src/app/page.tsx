@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Heading, Text, Button, Column, Row, Tag, Grid, SmartLink, Line } from "@once-ui-system/core";
+import { Heading, Text, Button, RevealFx, Column, Row, Tag, Grid, SmartLink, Line } from "@once-ui-system/core";
 import { home, person } from "@/resources";
 import { Introduction, ResearchCard, PublicationList } from "@/components/academic";
 import papers from "@/resources/papers.json";
@@ -10,12 +10,16 @@ export default function Home() {
       <Column fillWidth horizontal="center" gap="24">
         <Image className="home-portrait" src={person.avatar} alt={person.name} width={960} height={1280} preload />
         <Column horizontal="center" align="center" gap="16">
-          <Heading as="h1" variant="display-strong-xl">
-            {home.headline}
-          </Heading>
-          <Text variant="display-default-xs" onBackground="neutral-weak">
-            {home.subline}
-          </Text>
+          <RevealFx translateY="4" fillWidth horizontal="center">
+            <Column align="center" gap="16">
+              <Heading as="h1" variant="display-strong-xl">
+                {home.headline}
+              </Heading>
+              <Text variant="display-default-xs" onBackground="neutral-weak">
+                {home.subline}
+              </Text>
+            </Column>
+          </RevealFx>
           <Button href="/about/" variant="secondary" size="m" data-border="rounded">
             Ph.D. candidate · KAIST VILAB
           </Button>

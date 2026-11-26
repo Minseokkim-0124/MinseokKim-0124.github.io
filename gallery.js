@@ -1,4 +1,5 @@
 const photos = window.galleryImages;
+document.querySelector(".gallery-total").textContent = `${photos.length} photographs`;
 const grid = document.querySelector("#photo-gallery");
 const viewer = document.querySelector("#lightbox");
 const fullPhoto = document.querySelector("#full-photo");

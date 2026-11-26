@@ -9,17 +9,9 @@ export function Introduction() {
         environments, understand human behaviour, and connect information across different modalities.{" "}
       </p>{" "}
       <p>
-        {" "}
-        My work spans <strong>3D perception and data-efficient learning</strong>, including LiDAR/Radar perception, open-world category discovery, and
-        vision–language dataset distillation. Through these topics, I have explored how models can recognize unfamiliar categories and learn useful
-        representations from limited data.{" "}
-      </p>{" "}
-      <p>
-        {" "}
-        More recently, my research has focused on <strong>egocentric understanding and prediction</strong>, <strong>audio-visual generation</strong>,
-        and <strong>spatial audio</strong>. I’m interested in understanding activities and human motion from sparse wearable signals, as well as
-        generating and controlling sound grounded in visual content. I also explore retrieval and lightweight adaptation as ways to extend pretrained
-        models.{" "}
+        My work on <strong>3D perception and data-efficient learning</strong> spans LiDAR and radar sensing, open-world category discovery, and
+        vision–language dataset distillation. I now study how to recognize activities and predict human motion from sparse wearable signals, and how
+        to generate <strong>spatial audio from video</strong>.
       </p>{" "}
       <p>
         {" "}

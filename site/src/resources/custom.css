@@ -5,6 +5,14 @@ html {
 body {
   overflow-x: clip;
 }
+.home-portrait {
+  width: clamp(9.5rem, 22vw, 13rem);
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid var(--neutral-alpha-medium);
+}
 .introduction p {
   margin: 0;
   line-height: 1.8;

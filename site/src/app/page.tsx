@@ -1,4 +1,5 @@
-import { Heading, Text, Button, Avatar, RevealFx, Column, Row, Tag, Grid, SmartLink, Line } from "@once-ui-system/core";
+import Image from "next/image";
+import { Heading, Text, Button, Column, Row, Tag, Grid, SmartLink, Line } from "@once-ui-system/core";
 import { home, person } from "@/resources";
 import { Introduction, ResearchCard, PublicationList } from "@/components/academic";
 import papers from "@/resources/papers.json";
@@ -7,24 +8,18 @@ export default function Home() {
   return (
     <Column maxWidth="m" gap="xl" paddingY="32" horizontal="center">
       <Column fillWidth horizontal="center" gap="24">
-        <RevealFx translateY="4" horizontal="center">
+        <Image className="home-portrait" src={person.avatar} alt={person.name} width={960} height={1280} preload />
+        <Column horizontal="center" align="center" gap="16">
+          <Heading as="h1" variant="display-strong-xl">
+            {home.headline}
+          </Heading>
+          <Text variant="display-default-xs" onBackground="neutral-weak">
+            {home.subline}
+          </Text>
           <Button href="/about/" variant="secondary" size="m" data-border="rounded">
-            <Row gap="12" vertical="center">
-              <Avatar src={person.avatar} size="s" />
-              Ph.D. candidate · KAIST VILAB
-            </Row>
+            Ph.D. candidate · KAIST VILAB
           </Button>
-        </RevealFx>
-        <RevealFx translateY="4" fillWidth horizontal="center">
-          <Column align="center" gap="16">
-            <Heading as="h1" variant="display-strong-xl">
-              {home.headline}
-            </Heading>
-            <Text variant="display-default-xs" onBackground="neutral-weak">
-              {home.subline}
-            </Text>
-          </Column>
-        </RevealFx>
+        </Column>
         <Row wrap gap="8" horizontal="center">
           {["Multimodal AI", "3D Understanding", "AR/VR Applications"].map((x) => (
             <Tag key={x} size="l">

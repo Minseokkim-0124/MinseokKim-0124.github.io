@@ -1,0 +1,82 @@
+[
+  {
+    "key": "kim2026vlm",
+    "title": "Can VLMs Assemble Local Decisions into Global Structure?",
+    "authors": "Minseok Kim and Jaewoo Jeong and Kuk-Jin Yoon",
+    "year": "2027",
+    "venue": "Preprint",
+    "kind": "preprint"
+  },
+  {
+    "key": "jeong2026zsc",
+    "title": "Zero-Shot Coordination under Partial Observability by Predicting Intention of Partner",
+    "authors": "Yuhwan Jeong* and Hoyong Kwon* and Jinnyeong Yang* and Minseok Kim and Jihun Kim and Kuk-Jin Yoon",
+    "year": "2027",
+    "venue": "Preprint",
+    "kind": "preprint"
+  },
+  {
+    "key": "jeong2026gaze",
+    "title": "Gaze-hand Trajectory Merging for Efficient Egocentric Video Understanding",
+    "authors": "Jaewoo Jeong* and Minseok Kim* and Yujin Bae* and Sung-Hoon Yoon and Kuk-Jin Yoon",
+    "year": "2027",
+    "venue": "Preprint",
+    "kind": "preprint"
+  },
+  {
+    "key": "kim2026spatializing",
+    "title": "Spatializing Frozen Video-to-Audio Generators with Covariance Planning and Realization-Aware Rendering",
+    "authors": "Minseok Kim and Kuk-Jin Yoon",
+    "year": "2026",
+    "venue": "Preprint",
+    "kind": "preprint"
+  },
+  {
+    "key": "oh2026lidar",
+    "title": "Solving LiDAR Inverse Problems using LiDAR Diffusion Models",
+    "authors": "Changgyoon Oh* and Minseok Kim* and Hoyong Kwon* and Seonkyu Song and Kuk-Jin Yoon",
+    "year": "2026",
+    "venue": "Preprint",
+    "kind": "preprint"
+  },
+  {
+    "key": "oh2026pointdps",
+    "title": "PointDPS: Diffusion Posterior Sampling for Point Inverse Problems",
+    "authors": "Changgyoon Oh* and Seonkyu Song* and Yuhwan Jeong* and Minseok Kim and Kuk-Jin Yoon",
+    "year": "2026",
+    "venue": "Preprint",
+    "kind": "preprint"
+  },
+  {
+    "key": "jeong2026multimodal",
+    "title": "Multimodal Distribution Matching for Vision-Language Dataset Distillation",
+    "authors": "Jongoh Jeong* and Hoyong Kwon* and Minseok Kim* and Kuk-Jin Yoon",
+    "year": "2026",
+    "venue": "CVPR",
+    "kind": "conference"
+  },
+  {
+    "key": "kim2026generalized",
+    "title": "Generalized Category Discovery for LiDAR Semantic Segmentation",
+    "authors": "Minseok Kim and Jiyong Boo and Kuk-Jin Yoon",
+    "year": "2026",
+    "venue": "WACV",
+    "kind": "conference"
+  },
+  {
+    "key": "kim2024onthefly",
+    "title": "On-the-fly Category Discovery for LiDAR Semantic Segmentation",
+    "authors": "Hyeonseong Kim* and Sung-Hoon Yoon* and Minseok Kim and Kuk-Jin Yoon",
+    "year": "2024",
+    "venue": "ECCV",
+    "kind": "conference"
+  },
+  {
+    "key": "chae2024lidar",
+    "title": "LiDAR-based All-weather 3D Object Detection via Prompting and Distilling 4D Radar",
+    "authors": "Yujeong Chae and Hyeonseong Kim and Changgyoon Oh and Minseok Kim and Kuk-Jin Yoon",
+    "year": "2024",
+    "venue": "ECCV",
+    "kind": "conference"
+  }
+]

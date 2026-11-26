@@ -1,0 +1,61 @@
+.thumbnail {
+  display: block;
+  width: 100%;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: var(--radius-m);
+  cursor: zoom-in;
+  overflow: hidden;
+  &:focus-visible {
+    outline: 2px solid var(--brand-on-background-strong);
+    outline-offset: 4px;
+  }
+}
+.dialog {
+  color: var(--neutral-on-background-strong);
+  background: var(--page-background);
+  border: 1px solid var(--neutral-alpha-medium);
+  border-radius: var(--radius-l);
+  padding: 1.25rem;
+  width: min(96vw, 90rem);
+  height: 94dvh;
+  max-width: 96vw;
+  max-height: 94dvh;
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+  }
+}
+.stage {
+  overflow: auto;
+  align-items: center;
+  justify-content: center;
+}
+.fullImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  min-height: 0;
+}
+.zoomed {
+  align-items: flex-start;
+  justify-content: flex-start;
+  .fullImage {
+    width: auto;
+    height: auto;
+    max-width: none;
+    min-width: 100%;
+  }
+}
+.caption {
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .caption {
+    display: none;
+  }
+  .dialog {
+    padding: 0.75rem;
+  }
+}

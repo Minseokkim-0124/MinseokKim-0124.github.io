@@ -1,3 +1,5 @@
+> **Current deployment:** The active site is the official Magic Portfolio app in `site/`. Follow root `AGENTS.md` and `site/.agents`. The Jekyll instructions below apply only to legacy files and are not the current deployment process.
+
 # Copilot Coding Agent Instructions
 
 ## Repository Overview

@@ -1,0 +1,61 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+body {
+  overflow-x: clip;
+}
+.introduction p {
+  margin: 0;
+  line-height: 1.8;
+}
+.introduction a,
+.introduction strong,
+.author-name {
+  color: var(--neutral-on-background-strong);
+}
+.introduction a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.research-video {
+  width: 100%;
+  max-height: 36rem;
+  aspect-ratio: 16/9;
+  object-fit: contain;
+  background: var(--neutral-background-medium);
+  border-radius: var(--radius-l);
+  border: 1px solid var(--neutral-alpha-weak);
+}
+.publication {
+  scroll-margin-top: 7rem;
+}
+.skip-link {
+  position: fixed;
+  top: -5rem;
+  left: 1rem;
+  padding: 1rem;
+  background: var(--page-background);
+  z-index: 100;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+.magic-cursor {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 50;
+}
+@media (max-width: 700px) {
+  main {
+    padding: 1.25rem !important;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

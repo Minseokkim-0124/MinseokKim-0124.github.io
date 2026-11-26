@@ -13,3 +13,10 @@ _scripts/*
 _data/citations.yml
 # Gallery page has embedded Liquid + CSS/JS that conflicts with prettier
 _pages/gallery.md
+
+# Generated official Magic Portfolio files
+site/.next/
+site/**/.next/
+site/out/
+site/next-env.d.ts
+site/*.tsbuildinfo

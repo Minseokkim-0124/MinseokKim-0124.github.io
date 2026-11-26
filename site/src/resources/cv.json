@@ -1,0 +1,178 @@
+{
+  "name": "Minseok Kim",
+  "headline": "Ph.D Candidate in Mechanical Engineering at KAIST",
+  "email": "alstjrx1x1@kaist.ac.kr",
+  "location": "Daejeon, South Korea",
+  "phone": "+82-10-2822-5629",
+  "photo": "",
+  "sections": {
+    "Summary": ["Advisor: Kuk-Jin Yoon", "Birth: 24th January, 1998 | Nationality: Republic of Korea"],
+    "Education": [
+      {
+        "institution": "Korea Advanced Institute of Science and Technology (KAIST)",
+        "location": "Daejeon, South Korea",
+        "area": "Mechanical Engineering",
+        "studyType": "Ph.D. Candidate",
+        "start_date": 2025,
+        "end_date": "Present",
+        "highlights": ["Advisor: Kuk-Jin Yoon"]
+      },
+      {
+        "institution": "Korea Advanced Institute of Science and Technology (KAIST)",
+        "location": "Daejeon, South Korea",
+        "area": "Mechanical Engineering",
+        "studyType": "M.S.",
+        "start_date": 2023,
+        "end_date": 2025,
+        "highlights": ["Advisor: Kuk-Jin Yoon"]
+      },
+      {
+        "institution": "Hanyang University",
+        "location": "Seoul, South Korea",
+        "area": "Mechanical Engineering",
+        "studyType": "B.S.",
+        "start_date": 2017,
+        "end_date": 2023,
+        "highlights": ["Summa Cum Laude"]
+      }
+    ],
+    "Experience": [
+      {
+        "company": "Hanyang University",
+        "position": "Capstone Design Student",
+        "location": "Seoul, South Korea",
+        "start_date": 2023,
+        "end_date": 2023,
+        "highlights": ["4-link Fruit Harvesting Robot using Sensor Fusion Algorithm using Depth Camera"]
+      },
+      {
+        "company": "Dyros Robotics Bootcamp",
+        "position": "Student",
+        "location": "Seoul, South Korea",
+        "start_date": 2022,
+        "end_date": 2022,
+        "highlights": ["Robotics bootcamp participant"]
+      },
+      {
+        "company": "KSAE Student Formula (EV)",
+        "position": "Team RACE",
+        "location": "South Korea",
+        "start_date": 2020,
+        "end_date": 2021,
+        "highlights": ["Attended Student Formula (EV) at KSAE 2021"]
+      },
+      {
+        "company": "15th Special Missions Wing, Republic of Korea Air Force",
+        "position": "Sergeant (Mandatory Military Service)",
+        "location": "South Korea",
+        "start_date": 2018,
+        "end_date": 2020,
+        "highlights": [
+          "ROKAF Enlisted Class 787",
+          "Completed mandatory military service (23 April 2018 - 12 March 2020), honorably discharged as Sergeant"
+        ]
+      }
+    ],
+    "Interests": [
+      {
+        "name": "Research interests",
+        "keywords": [
+          "Multimodal AI",
+          "3D Understanding",
+          "AR/VR Applications",
+          "Vision–Language Models and VLM Diagnosis",
+          "Egocentric Understanding",
+          "Audio-Visual Generation"
+        ]
+      }
+    ],
+    "Publications": [
+      {
+        "title": "Multimodal Distribution Matching for Vision-Language Dataset Distillation",
+        "publisher": "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2026",
+        "releaseDate": 2026,
+        "summary": "Jongoh Jeong*, Hoyong Kwon*, Minseok Kim* and Kuk-Jin Yoon (* equal contribution)"
+      },
+      {
+        "title": "Generalized Category Discovery for LiDAR Semantic Segmentation",
+        "publisher": "IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), 2026",
+        "releaseDate": 2026,
+        "summary": "Minseok Kim, Jiyong Boo and Kuk-Jin Yoon"
+      },
+      {
+        "title": "On-the-fly Category Discovery for LiDAR Semantic Segmentation",
+        "publisher": "European Conference on Computer Vision (ECCV), 2024",
+        "releaseDate": 2024,
+        "summary": "Hyeonseong Kim*, Sung-Hoon Yoon*, Minseok Kim and Kuk-Jin Yoon (* equal contribution)"
+      },
+      {
+        "title": "LiDAR-based All-weather 3D Object Detection via Prompting and Distilling 4D Radar",
+        "publisher": "European Conference on Computer Vision (ECCV), 2024",
+        "releaseDate": 2024,
+        "summary": "Yujeong Chae, Hyeonseong Kim, Changgyoon Oh, Minseok Kim, and Kuk-Jin Yoon"
+      }
+    ],
+    "Projects": [
+      {
+        "name": "Development of Mobility and Connectivity Platform for Unmanned Autonomous Delivery",
+        "summary": "Funded by Korea Government (The Ministry of Trade, Industry & Energy, MOTIE)",
+        "start_date": 2025,
+        "end_date": "Present",
+        "highlights": ["Research Project", "Sensors: RGB, Depth, Radar, Active IR"]
+      },
+      {
+        "name": "Development of quadrupedal robot system technology for surveillance, reconnaissance, and search missions",
+        "summary": "Funded by Korea Government (Agency for Defense Development, ADD)",
+        "start_date": 2023,
+        "end_date": 2024,
+        "highlights": ["Research Project"]
+      }
+    ],
+    "Honors and Awards": [
+      {
+        "name": "Summa Cum Laude",
+        "date": 2023,
+        "location": "Hanyang University"
+      },
+      {
+        "name": "IC-PBL Scholarship",
+        "date": 2023,
+        "location": "Hanyang University"
+      },
+      {
+        "name": "Hanyang Brain Scholarship",
+        "date": 2017,
+        "location": "Hanyang University"
+      }
+    ],
+    "Extracurricular Activities": [
+      {
+        "bullet": "Teaching Assistant, Introduction to Visual Intelligence (Spring 2025)"
+      },
+      {
+        "bullet": "Teaching Assistant, Autonomous Mobile System Programming (Fall 2025)"
+      },
+      {
+        "bullet": "Teaching Assistant, Samsung AI Expert (August 2025, 2026)"
+      },
+      {
+        "bullet": "Counseling Assistant (Fall 2023 – Fall 2024)"
+      }
+    ],
+    "Academic Services": [
+      {
+        "bullet": "AAAI Conference on Artificial Intelligence (AAAI), 2026, 2027"
+      }
+    ],
+    "Languages": [
+      {
+        "name": "Korean",
+        "summary": "First language"
+      },
+      {
+        "name": "English",
+        "summary": "Basic professional proficiency"
+      }
+    ]
+  }
+}

@@ -1,5 +1,6 @@
 import { Column, Row, Heading, Text, Button, SmartLink, Tag } from "@once-ui-system/core";
 import cv from "@/resources/cv.json";
+import { PublicationList } from "@/components/academic/PublicationList";
 export const metadata = {
   title: "Curriculum vitae — Minseok Kim",
   description: "Education, research, experience, and service of Minseok Kim, KAIST VILAB.",
@@ -81,15 +82,17 @@ export default function CV() {
       {sections.map(([title, entries]) => (
         <Column as="section" key={title} id={title.toLowerCase().replaceAll(" ", "-")} gap="24" paddingTop="24" borderTop="neutral-alpha-medium">
           <Heading as="h2" variant="heading-strong-xl">
-            {title === "Publications" ? "Selected publications" : title}
+            {title === "Publications" ? "All Publications" : title}
           </Heading>
-          {entries.map((entry, i) => (
-            <EntryView key={i} entry={entry} />
-          ))}
-          {title === "Publications" && (
-            <SmartLink href="/publications/" suffixIcon="arrowRight">
-              All publications and preprints
-            </SmartLink>
+          {title === "Publications" ? (
+            <>
+              <Text onBackground="neutral-weak" variant="body-default-s">
+                * Equal contribution
+              </Text>
+              <PublicationList linkTitles />
+            </>
+          ) : (
+            entries.map((entry, i) => <EntryView key={i} entry={entry} />)
           )}
           {title === "Projects" && (
             <SmartLink href="/projects/" suffixIcon="arrowRight">

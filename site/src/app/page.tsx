@@ -1,8 +1,7 @@
 import Image from "next/image";
-import { Heading, Text, Button, RevealFx, Column, Row, Tag, Grid, SmartLink, Line } from "@once-ui-system/core";
+import { Heading, Text, Button, RevealFx, Column, Row, Tag, SmartLink, Line } from "@once-ui-system/core";
 import { home, person } from "@/resources";
-import { Introduction, ResearchCard, PublicationList } from "@/components/academic";
-import papers from "@/resources/papers.json";
+import { Introduction, PublicationList } from "@/components/academic";
 export const metadata = { title: home.title, description: home.description, alternates: { canonical: "/" } };
 export default function Home() {
   return (
@@ -46,21 +45,13 @@ export default function Home() {
       <Column as="section" id="research" fillWidth gap="32" paddingTop="40">
         <Row fillWidth horizontal="between" vertical="center" wrap gap="16">
           <Heading as="h2" variant="display-strong-s">
-            Selected research
+            All Publications
           </Heading>
-          <SmartLink href="/publications/" suffixIcon="arrowRight">
-            All publications
-          </SmartLink>
+          <Text variant="body-default-s" onBackground="neutral-weak">
+            * Equal contribution
+          </Text>
         </Row>
-        <Column paddingY="24" borderTop="neutral-alpha-medium" borderBottom="neutral-alpha-medium">
-          <PublicationList items={papers.filter((p) => p.key === "kim2026spatializing")} />
-        </Column>
-        <ResearchCard paperKey="oh2026lidar" />
-        <Grid columns={2} s={{ columns: 1 }} gap="40">
-          {["jeong2026multimodal", "jeong2026zsc", "oh2026pointdps"].map((key) => (
-            <ResearchCard key={key} paperKey={key} />
-          ))}
-        </Grid>
+        <PublicationList linkTitles />
       </Column>
       <Column as="section" id="projects" fillWidth gap="24" paddingTop="32">
         <Row fillWidth horizontal="between" vertical="center" wrap gap="16">

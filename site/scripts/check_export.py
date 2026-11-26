@@ -18,14 +18,23 @@ class Page(HTMLParser):
         self.refs = []
         self.ids = set()
         self.images = []
+        self.publications = []
+        self.paper_sources = None
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
+        if tag == 'article' and a.get('id', '').startswith('paper-'):
+            self.paper_sources = []
+            self.publications.append((a['id'], self.paper_sources))
+        if tag == 'source' and self.paper_sources is not None:
+            self.paper_sources.append(a.get('src'))
         if 'id' in a: self.ids.add(a['id'])
         if tag in ('a', 'link') and a.get('href'): self.refs.append(a['href'])
         if tag in ('img', 'script', 'source', 'video'):
             for key in ('src', 'poster'):
                 if a.get(key): self.refs.append(a[key])
         if tag == 'img': self.images.append(a)
+    def handle_endtag(self, tag):
+        if tag == 'article': self.paper_sources = None
     def handle_data(self, value): self.text.append(value)
 
 routes = ['', 'about', 'cv', 'gallery', 'publications', 'projects', 'work',
@@ -52,9 +61,14 @@ for route in routes:
 data_root = Path(__file__).resolve().parents[1] / 'src/resources'
 papers = json.loads((data_root / 'papers.json').read_text(encoding='utf-8'))
 photos = json.loads((data_root / 'gallery.json').read_text(encoding='utf-8'))
-for paper in papers:
-    if 'paper-' + paper['key'] not in pages['publications'].ids: errors.append(f'Missing paper: {paper["title"]}')
-if len(papers) != 10 or len(photos) != 24: errors.append('Migration content count mismatch')
+expected_publications = [
+    ('paper-' + paper['key'], [paper['video']['src']] if paper.get('video') else [])
+    for paper in papers
+]
+for route in ['', 'publications', 'cv']:
+    if route in pages and pages[route].publications != expected_publications:
+        errors.append(f'/{route}: publication order, count or associated videos differ from papers.json')
+if len(photos) != 24: errors.append('Gallery content count mismatch')
 for photo in photos:
     for key in ['src', 'thumb']:
         if not (root / photo[key].lstrip('/')).is_file(): errors.append(f'Missing gallery asset: {photo[key]}')
@@ -71,4 +85,4 @@ for path in root.rglob('*.pdf'):
     if path.name != 'Academic_Curriculum_Vitae.pdf': errors.append(f'Unexpected public PDF: {path.name}')
 if errors:
     raise SystemExit('\n'.join(errors))
-print(f'PASS: {len(routes)} routes, {len(references)} local references, 10 papers, 24 gallery photos, 5 videos, CV service record and legacy URLs.')
+print(f'PASS: {len(routes)} routes, {len(references)} local references, {len(papers)} papers and their videos on home, publications and CV, gallery photos, CV service record and legacy URLs.')

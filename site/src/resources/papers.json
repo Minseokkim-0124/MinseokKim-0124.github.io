@@ -9,6 +9,7 @@
   },
   {
     "key": "jeong2026zsc",
+    "video": { "src": "/assets/zero-shot-coordination.mp4", "poster": "/assets/coordination-poster.jpg" },
     "title": "Zero-Shot Coordination under Partial Observability by Predicting Intention of Partner",
     "authors": "Yuhwan Jeong* and Hoyong Kwon* and Jinnyeong Yang* and Minseok Kim and Jihun Kim and Kuk-Jin Yoon",
     "year": "2027",
@@ -33,6 +34,7 @@
   },
   {
     "key": "oh2026lidar",
+    "video": { "src": "/assets/lidar.mp4", "poster": "/assets/lidar-poster.jpg" },
     "title": "Solving LiDAR Inverse Problems using LiDAR Diffusion Models",
     "authors": "Changgyoon Oh* and Minseok Kim* and Hoyong Kwon* and Seonkyu Song and Kuk-Jin Yoon",
     "year": "2026",
@@ -41,6 +43,7 @@
   },
   {
     "key": "oh2026pointdps",
+    "video": { "src": "/assets/point-dps.mp4", "poster": "/assets/point-dps-poster.jpg" },
     "title": "PointDPS: Diffusion Posterior Sampling for Point Inverse Problems",
     "authors": "Changgyoon Oh* and Seonkyu Song* and Yuhwan Jeong* and Minseok Kim and Kuk-Jin Yoon",
     "year": "2026",
@@ -49,6 +52,7 @@
   },
   {
     "key": "jeong2026multimodal",
+    "video": { "src": "/assets/distillation.mp4", "poster": "/assets/MMDD.png" },
     "title": "Multimodal Distribution Matching for Vision-Language Dataset Distillation",
     "authors": "Jongoh Jeong* and Hoyong Kwon* and Minseok Kim* and Kuk-Jin Yoon",
     "year": "2026",

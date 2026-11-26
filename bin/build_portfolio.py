@@ -6,9 +6,11 @@ Requires PyYAML. CV and project content stays in the existing Jekyll data files.
 
 import argparse
 import html
+import hashlib
 import re
 import shutil
 from pathlib import Path
+from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 import yaml
 
@@ -59,7 +61,7 @@ def render_cv():
     section("Experience", "".join(entry(period(item), item["position"], item["company"] + " · " + item["location"], item.get("highlights", [])) for item in data["Experience"]))
     section("Research interests", '<div class="research-areas"><span>Multimodal AI</span><span>3D Understanding</span><span>AR/VR Applications</span></div>')
     section("Publications", "".join(entry(item["releaseDate"], item["title"], item["publisher"], [item["summary"]]) for item in data["Publications"]) + '<a class="text-link" href="/#publications">View all publications and preprints</a>')
-    section("Projects", "".join(entry(period(item), item["name"], item["summary"]) for item in data["Projects"]) + '<a class="text-link" href="/projects/">Explore research projects</a>')
+    section("Projects", "".join(entry(period(item), item["name"], item["summary"], item.get("highlights", [])) for item in data["Projects"]) + '<a class="text-link" href="/projects/">Explore research projects</a>')
     section("Honors and Awards", "".join(entry(item["date"], item["name"], item["location"]) for item in data["Honors and Awards"]))
     for title in ("Extracurricular Activities", "Academic Services"):
         section(title, bullets([item["bullet"] for item in data[title]]))
@@ -80,7 +82,8 @@ def render_projects():
         slug = "autonomous-delivery" if delivery else "quadrupedal-robot"
         media = '<div class="delivery-media"><video controls muted playsinline preload="none" poster="/assets/delivery-poster.jpg" aria-label="Unmanned autonomous delivery project video"><source src="/assets/autonomous-delivery.mp4" type="video/mp4"></video></div>' if delivery else ""
         skills = "".join(f"<span>{esc(skill.strip())}</span>" for skill in item["skills"].split(","))
-        result.append(f'<article class="project-detail" id="{slug}">{media}<div class="delivery-content"><span class="eyebrow">{esc(item["period"])}</span><h2>{esc(item["title"])}</h2><p>{esc(item["role"])}</p><p class="funding">Funded by {esc(item["funder"])}.</p><div class="project-skills">{skills}</div></div></article>')
+        sensors = f'<p class="project-sensors"><strong>Sensors</strong> · {esc(item["sensors"])}</p>' if item.get("sensors") else ""
+        result.append(f'<article class="project-detail" id="{slug}">{media}<div class="delivery-content"><span class="eyebrow">{esc(item["period"])}</span><h2>{esc(item["title"])}</h2><p>{esc(item["role"])}</p><p class="funding">Funded by {esc(item["funder"])}.</p>{sensors}<div class="project-skills">{skills}</div></div></article>')
     return "".join(result)
 
 
@@ -93,6 +96,44 @@ def replace_content(path, name, content):
     path.write_text(page, encoding="utf-8")
 
 
+def version_page_links(output, pages):
+    """Give internal navigation and CSS/JS fresh URLs after a content change.
+
+    GitHub Pages caches HTML for ten minutes. A design migration otherwise can
+    mix newly loaded homepages with old cached destination pages or scripts.
+    Canonical URLs, same-page anchors and large media URLs stay unchanged.
+    """
+    hasher = hashlib.sha256()
+    for path in sorted(set(pages) | set(output.glob("*.js")) | set(output.glob("*.css"))):
+        hasher.update(str(path.relative_to(output)).encode())
+        hasher.update(path.read_bytes())
+    version = hasher.hexdigest()[:12]
+    routes = {"/", "/index.html", "/404.html"}
+    for page in pages:
+        route = "/" + page.relative_to(output).as_posix()
+        routes.add(route)
+        if route.endswith("/index.html"):
+            routes.add(route[:-10])
+    for page in pages:
+        content = page.read_text(encoding="utf-8")
+
+        def stamp(match):
+            attribute, value = match.group(1), html.unescape(match.group(2))
+            url = urlsplit(value)
+            if url.scheme or url.netloc or not url.path.startswith("/"):
+                return match.group(0)
+            if url.path not in routes and Path(url.path).suffix not in {".js", ".css"}:
+                return match.group(0)
+            query = dict(parse_qsl(url.query))
+            query["v"] = version
+            result = urlunsplit(("", "", url.path, urlencode(query), url.fragment))
+            return f'{attribute}="{esc(result)}"'
+
+        content = re.sub(r'(href|src)="([^"]+)"', stamp, content)
+        page.write_text(content, encoding="utf-8")
+    return version
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", required=True, type=Path)
@@ -100,6 +141,7 @@ def main():
     if output == ROOT or output == SOURCE or SOURCE in output.parents:
         raise ValueError("Output must not overwrite the source repository or portfolio source")
     output.mkdir(parents=True, exist_ok=True)
+    pages = []
     for file in SOURCE.rglob("*"):
         if not file.is_file():
             continue
@@ -109,6 +151,8 @@ def main():
         dest = output / relative
         dest.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(file, dest)
+        if file.suffix == ".html":
+            pages.append(dest)
     replace_content(output / "cv/index.html", "cv", render_cv())
     replace_content(output / "projects/index.html", "projects", render_projects())
     # Existing project-detail URLs continue to use the new design.
@@ -116,8 +160,10 @@ def main():
         dest = output / "projects" / name / "index.html"
         dest.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(output / "projects/index.html", dest)
+        pages.append(dest)
+    version = version_page_links(output, pages)
     (output / ".nojekyll").touch()
-    print(f"Portfolio pages prepared in {output}")
+    print(f"Portfolio pages prepared in {output} (version {version})")
 
 
 if __name__ == "__main__":

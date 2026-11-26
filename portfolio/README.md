@@ -13,3 +13,5 @@ This directory contains the published dark/light portfolio design. GitHub Action
 For a standalone local preview, install PyYAML, run `python bin/build_portfolio.py --output _site`, and serve `_site` with `python -m http.server 4173 --directory _site --bind 127.0.0.1`. The full deployment also retains the original Jekyll output.
 
 Pushes to `main` deploy automatically using `.github/workflows/deploy.yml`. Only files in this directory and the generated CV/project content are overlaid; untracked draft PDFs in the repository root are not part of the redesign.
+
+Navigation URLs and CSS/JS include a content version generated during the build, preventing old cached pages from mixing with a new design. `bin/check_portfolio.py --directory _site` checks all main routes, legacy project addresses, and gallery files before deployment and against the published branch.

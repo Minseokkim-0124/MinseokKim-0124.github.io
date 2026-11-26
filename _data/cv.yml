@@ -109,6 +109,7 @@ cv:
         end_date: Present
         highlights:
           - Research Project
+          - "Sensors: RGB, Depth, Radar, Active IR"
 
       - name: Development of quadrupedal robot system technology for surveillance, reconnaissance, and search missions
         summary: Funded by Korea Government (Agency for Defense Development, ADD)

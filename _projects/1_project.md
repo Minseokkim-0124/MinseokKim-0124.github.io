@@ -6,6 +6,7 @@ importance: 1
 category: research
 role: Project Member
 skills: ROS2, Python, 3D Lane Detection, 3D Object Detection, C++
+sensors: RGB, Depth, Radar, Active IR
 period: March 2025 – Present
 start_sort: 202503
 funder: Korea Government (The Ministry of Trade, Industry & Energy, MOTIE)
@@ -14,6 +15,7 @@ funder: Korea Government (The Ministry of Trade, Industry & Energy, MOTIE)
 - Role: Research Member
 - Period: March 2025 – Present
 - Funding: Korea Government (The Ministry of Trade, Industry & Energy, MOTIE)
+- Sensors: RGB, Depth, Radar, Active IR
 - Skills: ROS2, Python, 3D Lane Detection, 3D Object Detection, C++
 
 <div class="mt-3">

@@ -9,6 +9,7 @@ on:
       - "assets/**"
       - "portfolio/**"
       - "bin/build_portfolio.py"
+      - "bin/check_portfolio.py"
       - "_sass/**"
       - "_scripts/**"
       - "**.bib"
@@ -40,6 +41,7 @@ on:
       - "assets/**"
       - "portfolio/**"
       - "bin/build_portfolio.py"
+      - "bin/check_portfolio.py"
       - "_sass/**"
       - "_scripts/**"
       - "**.bib"
@@ -104,6 +106,8 @@ jobs:
           purgecss -c purgecss.config.js
       - name: Apply portfolio design
         run: python bin/build_portfolio.py --output _site
+      - name: Verify portfolio routes and assets
+        run: python bin/check_portfolio.py --directory _site
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4

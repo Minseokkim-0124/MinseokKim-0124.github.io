@@ -31,16 +31,18 @@ education:
     degree: "B.S., Mechanical Engineering, Hanyang University"
 ---
 
-Hello! 👋 I am a 2nd-year Ph.D. student at <a href="https://vi.kaist.ac.kr/">VILAB</a>, advised by <a href="https://vi.kaist.ac.kr/members/kuk-jin-yoon/">Prof. Kuk-Jin Yoon</a> in the Department of Mechanical Engineering at KAIST.
+Hello! I am a Ph.D. student at <a href="https://vi.kaist.ac.kr/">VILAB</a>, advised by <a href="https://vi.kaist.ac.kr/members/kuk-jin-yoon/">Prof. Kuk-Jin Yoon</a> in the Department of Mechanical Engineering at KAIST.
 
-🔬 **Research Interests.** My research spans **robust 3D perception** (LiDAR / Radar) and **data-efficient learning** (Category Discovery & Dataset Distillation). Recently, my focus has shifted toward understanding **human intention in egocentric scenarios** — exploring how AI systems can interpret first-person videos to advance next-generation **AR / VR** and human-robot interaction technologies.
+**Research Interests.** I study how AI can understand human behaviour and generate sound grounded in the visual world. My recent work focuses on **egocentric understanding and prediction** from sparse wearable signals, and **controllable audio-visual generation**. I am particularly interested in what pretrained models represent, how their outputs can be controlled, and how retrieval and lightweight modules can extend their capabilities.
 
-💡 **Current Directions.**
+**Current Directions.**
 
-- Egocentric video understanding (gaze, hand, intention)
-- Vision-Language Models (VLM) for scene understanding
-- Generalized / Open-world 3D perception
+- **Egocentric understanding and prediction:** using head motion, minimal visual input, and retrieved experiences to recognize activities, estimate and forecast body motion, and locate the wearer.
+- **Audio-visual generation and control:** studying how visual features govern sound identity and event timing, and using these insights for localized audio editing and synchronization.
+- **Spatial audio:** extending frozen video-to-audio generators with editable spatial representations that control sound direction and diffuseness without regenerating the soundtrack.
 
-📬 I am always happy to discuss ideas and collaborate on egocentric vision, VLMs, or 3D perception. Feel free to reach out via email!
+These directions build on my earlier work in **3D perception and data-efficient learning**, including LiDAR/Radar perception, open-world category discovery, and vision-language dataset distillation. My broader goal is to develop efficient, controllable perception and generation systems for wearable and immersive experiences.
 
-🎸 Outside of research, I enjoy playing electric guitar, photography, and working out.
+I am happy to discuss ideas and collaborate on egocentric perception, multimodal learning, and audio-visual generation. Feel free to reach out via email!
+
+Outside of research, I enjoy playing electric guitar, photography, and working out.

@@ -19,12 +19,15 @@ class Page(HTMLParser):
         self.ids = set()
         self.images = []
         self.publications = []
+        self.publication_year = None
         self.paper_sources = None
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
+        if tag == 'section' and a.get('aria-labelledby', '').startswith('publications-'):
+            self.publication_year = a['aria-labelledby'].removeprefix('publications-')
         if tag == 'article' and a.get('id', '').startswith('paper-'):
             self.paper_sources = []
-            self.publications.append((a['id'], self.paper_sources))
+            self.publications.append((self.publication_year, a['id'], self.paper_sources))
         if tag == 'source' and self.paper_sources is not None:
             self.paper_sources.append(a.get('src'))
         if 'id' in a: self.ids.add(a['id'])
@@ -35,6 +38,7 @@ class Page(HTMLParser):
         if tag == 'img': self.images.append(a)
     def handle_endtag(self, tag):
         if tag == 'article': self.paper_sources = None
+        if tag == 'section': self.publication_year = None
     def handle_data(self, value): self.text.append(value)
 
 routes = ['', 'about', 'cv', 'gallery', 'publications', 'projects', 'work',
@@ -62,12 +66,12 @@ data_root = Path(__file__).resolve().parents[1] / 'src/resources'
 papers = json.loads((data_root / 'papers.json').read_text(encoding='utf-8'))
 photos = json.loads((data_root / 'gallery.json').read_text(encoding='utf-8'))
 expected_publications = [
-    ('paper-' + paper['key'], [paper['video']['src']] if paper.get('video') else [])
-    for paper in papers
+    (paper['year'], 'paper-' + paper['key'], [paper['video']['src']] if paper.get('video') else [])
+    for paper in sorted(papers, key=lambda paper: int(paper['year']), reverse=True)
 ]
 for route in ['', 'publications', 'cv']:
     if route in pages and pages[route].publications != expected_publications:
-        errors.append(f'/{route}: publication order, count or associated videos differ from papers.json')
+        errors.append(f'/{route}: publication years, order, count or associated videos differ from papers.json')
 if len(photos) != 24: errors.append('Gallery content count mismatch')
 for photo in photos:
     for key in ['src', 'thumb']:

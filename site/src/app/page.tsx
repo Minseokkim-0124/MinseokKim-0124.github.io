@@ -51,7 +51,7 @@ export default function Home() {
             * Equal contribution
           </Text>
         </Row>
-        <PublicationList linkTitles />
+        <PublicationList linkTitles yearHeading="h3" />
       </Column>
       <Column as="section" id="projects" fillWidth gap="24" paddingTop="32">
         <Row fillWidth horizontal="between" vertical="center" wrap gap="16">

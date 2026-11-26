@@ -89,7 +89,7 @@ export default function CV() {
               <Text onBackground="neutral-weak" variant="body-default-s">
                 * Equal contribution
               </Text>
-              <PublicationList linkTitles />
+              <PublicationList linkTitles yearHeading="h3" />
             </>
           ) : (
             entries.map((entry, i) => <EntryView key={i} entry={entry} />)

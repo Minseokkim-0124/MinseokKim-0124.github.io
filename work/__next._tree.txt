@@ -1,5 +1,5 @@
 :HL["/_next/static/chunks/0zvjbdzhy7z56.css","style"]
-:HL["/_next/static/chunks/2j43g9bf_k7_b.css","style"]
+:HL["/_next/static/chunks/2p13zh4qjp8lk.css","style"]
 :HL["/_next/static/chunks/14865bmmev016.css","style"]
 :HL["/_next/static/chunks/08pu4ngztpktd.css","style"]
 :HL["/_next/static/chunks/1-d8fjh09vgu3.css","style"]
@@ -8,4 +8,4 @@
 :HL["/_next/static/media/605ce01b664af129-s.p.0wgildi0cnwt9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"work","h":64,"c":"$Q2"}]]
-0:{"b":"E3uv5KvSVGNF3XpSIl4Vl","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
+0:{"b":"n72jDcYorpPtKw8LKo4HT","t":{"t":{"s":"","h":16,"c":"$Q1"}}}

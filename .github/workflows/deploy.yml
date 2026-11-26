@@ -7,6 +7,8 @@ on:
       - main
     paths:
       - "assets/**"
+      - "portfolio/**"
+      - "bin/build_portfolio.py"
       - "_sass/**"
       - "_scripts/**"
       - "**.bib"
@@ -36,6 +38,8 @@ on:
       - main
     paths:
       - "assets/**"
+      - "portfolio/**"
+      - "bin/build_portfolio.py"
       - "_sass/**"
       - "_scripts/**"
       - "**.bib"
@@ -91,13 +95,15 @@ jobs:
       - name: Install and Build 🔧
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
-          pip3 install --upgrade nbconvert
+          pip3 install --upgrade nbconvert PyYAML
           export JEKYLL_ENV=production
           bundle exec jekyll build
       - name: Purge unused CSS 🧹
         run: |
           npm install -g purgecss
           purgecss -c purgecss.config.js
+      - name: Apply portfolio design
+        run: python bin/build_portfolio.py --output _site
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4

@@ -3,7 +3,7 @@
   const pointer = matchMedia("(hover: hover) and (pointer: fine)");
   const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
   const canvas = document.createElement("canvas");
-  canvas.className = "cursor-magic";
+  canvas.className = "magic-cursor";
   canvas.setAttribute("aria-hidden", "true");
   document.body.append(canvas);
   const context = canvas.getContext("2d");

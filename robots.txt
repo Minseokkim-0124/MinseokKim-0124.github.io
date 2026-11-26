@@ -1,4 +1,3 @@
-User-agent: *
-Disallow:
+User-Agent: *
 
-Sitemap: https://Minseokkim-0124.github.io/sitemap.xml
+Sitemap: https://minseokkim-0124.github.io/sitemap.xml
